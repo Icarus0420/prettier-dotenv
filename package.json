@@ -34,7 +34,8 @@
     "environment",
     "variables",
     "config",
-    "settings"
+    "settings",
+    "prettier"
   ],
   "readmeFilename": "README.md",
   "license": "BSD-2-Clause",

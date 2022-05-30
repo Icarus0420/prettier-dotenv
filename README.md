@@ -321,7 +321,7 @@ If you are using other frameworks (e.g. Next.js, Gatsby...), you need to consult
 Yes! `dotenv.config()` returns an object representing the parsed `.env` file. This gives you everything you need to continue setting values on `process.env`. For example:
 
 ```js
-const dotenv = require('dotenv')
+const dotenv = require('prettier-dotenv')
 const variableExpansion = require('dotenv-expand')
 const myEnv = dotenv.config()
 variableExpansion(myEnv)
@@ -333,7 +333,7 @@ Simply..
 
 ```javascript
 // index.mjs (ESM)
-import 'dotenv/config' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+import 'prettier-dotenv/config' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 import express from 'express'
 ```
 
@@ -352,7 +352,7 @@ import { Client } from 'best-error-reporting-service'
 export default new Client(process.env.API_KEY)
 
 // index.mjs
-import dotenv from 'dotenv'
+import dotenv from 'prettier-dotenv'
 dotenv.config()
 
 import errorReporter from './errorReporter.mjs'
@@ -370,7 +370,7 @@ import { Client } from 'best-error-reporting-service'
 export default new Client(process.env.API_KEY)
 
 // index.mjs
-import 'dotenv/config'
+import 'prettier-dotenv/config'
 
 import errorReporter from './errorReporter.mjs'
 errorReporter.report(new Error('documented example'))
@@ -380,7 +380,7 @@ Does that make sense? It's a bit unintuitive, but it is how importing of ES6 mod
 
 There are two alternatives to this approach:
 
-1. Preload dotenv: `node --require dotenv/config index.js` (_Note: you do not need to `import` dotenv with this approach_)
+1. Preload dotenv: `node --require prettier-dotenv/config index.js` (_Note: you do not need to `import` dotenv with this approach_)
 2. Create a separate file that will execute `config` first as outlined in [this comment on #133](https://github.com/motdotla/dotenv/issues/133#issuecomment-255298822)
 
 ### What about variable expansion?
