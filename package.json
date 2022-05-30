@@ -54,6 +54,6 @@
     "node": ">=12"
   },
   "dependencies": {
-    "axios": "^0.20.2"
+    "axios": "^0.24.0"
   }
 }
